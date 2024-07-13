@@ -13,31 +13,49 @@
             justify-content: center;
             align-items: center;
             height: 100vh; /* Ensures full viewport height */
+            background-color: #536353; /* Set your desired solid color */
+            margin: 0; /* Removes default margin */
+            position: relative; /* Ensure relative positioning for pseudo-elements */
         }
         .content {
             max-width: 600px; /* Optional: Limits the width of content */
             padding: 20px;
             text-align: center; /* Center-align text */
+            background-color: #92ac92; /* Optional: Adds a white background to content */
+            border-radius: 10px; /* Optional: Adds rounded corners to content */
+            position: relative; /* Ensure stacking context for z-index */
+            z-index: 1; /* Ensure content is above background text */
         }
-        .image-container {
-            margin-bottom: 20px; /* Adds space below the image */
+        .background-text {
+            content: "Explore the World of DABS Intelligence Agency"; /* Text content */
+            font-size: 3rem; /* Adjust font size */
+            font-weight: bold; /* Optional: Adjust font weight */
+            color: #ffffff; /* Text color set to white */
+            position: absolute; /* Position relative to body */
+            top: 50%; /* Adjust vertical position */
+            left: 50%; /* Adjust horizontal position to center text */
+            transform: translate(-50%, -50%); /* Center the text */
+            z-index: 0; /* Ensure text is behind content */
         }
-        .video-container {
-            position: relative;
-            width: 100%; /* Ensures video fills container width */
-            padding-top: 56.25%; /* Aspect ratio (16:9) for responsive design */
-            margin-bottom: 20px; /* Adds space below the video */
-        }
-        .video-container iframe {
+        .left-text {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            left: 20px;
+            top: 200;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00ff4c; /* Adjust color as needed */
+        
+        }
+        .left-text a:hover {
+            color: #00b32d; /* Change hyperlink color on hover */
+            text-decoration: underline; /* Underline on hover */
+    
         }
     </style>
 </head>
 <body>
+    <div class="left-text"><a href="https://www.instagram.com/dia.v2/" target="_blank">Visit our instagram!</a></div> <!-- Left-aligned text -->
+
     <div class="content">
         <h1>Welcome to the official DIA Website!</h1>
         <p>This is the only place where you can catch up on the latest news about DIA.</p>
@@ -46,7 +64,7 @@
         
         <!-- Image -->
         <div class="image-container">
-            <img src="https://scontent.fisb1-2.fna.fbcdn.net/v/t1.15752-9/350355420_290259376763282_71475529897165177_n.jpg?stp=dst-jpg_p100x100&_nc_cat=109&ccb=1-7&_nc_sid=b70caf&_nc_ohc=YOc7Px1mT9oQ7kNvgEdxkwG&_nc_ht=scontent.fisb1-2.fna&oh=03_Q7cD1QFOVI_-5StbC8awTJLUFxZCqANq534n6dN0QcYM6GGSvA&oe=66BA4D7F" alt="DIA Logo">
+            <img src="https://yt3.googleusercontent.com/c0-hyp1dX3W-JeoQdC8yNbhFsrMi1rXA1f7upFarNYXQPBviY8azrBxK9CMs2z4EC6IxzRlHOg=s160-c-k-c0x00ffffff-no-rj" alt="DIA Logo">
         </div>
 
         <!-- YouTube Video Embed -->
@@ -54,5 +72,9 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/-1kOrTV8wcI?autoplay=1" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+    
+    <!-- Background text -->
+    <div class="background-text"></div>
 </body>
 </html>
+
