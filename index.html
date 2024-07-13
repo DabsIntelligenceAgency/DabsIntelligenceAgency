@@ -3,13 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Text Example</title>
+    
+    <title>DABS Intelligence Agency</title>
+    
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ensures full viewport height */
+        }
+        .content {
+            max-width: 600px; /* Optional: Limits the width of content */
+            padding: 20px;
+            text-align: center; /* Center-align text */
+        }
+        .image-container {
+            margin-bottom: 20px; /* Adds space below the image */
+        }
+        .video-container {
+            position: relative;
+            width: 100%; /* Ensures video fills container width */
+            padding-top: 56.25%; /* Aspect ratio (16:9) for responsive design */
+            margin-bottom: 20px; /* Adds space below the video */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the official DIA Website!</h1>
-    <p>This is the only place where you can catch up on the latest news about DIA.</p>
-    
-    <h2>Current Goals:</h2>
-    <p>Just. Make. It. Better.</p>
+    <div class="content">
+        <h1>Welcome to the official DIA Website!</h1>
+        <p>This is the only place where you can catch up on the latest news about DIA.</p>
+        
+        <h2>Watch Our Bull@#!% :</h2>
+        
+        <!-- Image -->
+        <div class="image-container">
+            <img src="https://scontent.fisb1-2.fna.fbcdn.net/v/t1.15752-9/350355420_290259376763282_71475529897165177_n.jpg?stp=dst-jpg_p100x100&_nc_cat=109&ccb=1-7&_nc_sid=b70caf&_nc_ohc=YOc7Px1mT9oQ7kNvgEdxkwG&_nc_ht=scontent.fisb1-2.fna&oh=03_Q7cD1QFOVI_-5StbC8awTJLUFxZCqANq534n6dN0QcYM6GGSvA&oe=66BA4D7F" alt="DIA Logo">
+        </div>
+
+        <!-- YouTube Video Embed -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-1kOrTV8wcI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 </body>
 </html>
