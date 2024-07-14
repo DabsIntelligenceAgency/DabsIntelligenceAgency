@@ -16,9 +16,11 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh; /* Ensures full viewport height */
-            background-color: #536353; /* Set your desired solid color */
+            background-color: #536353; /* Fallback for solid color */
+            background-image: linear-gradient(to bottom right, #005c14, #8cd392); /* Gradient background */
             margin: 0; /* Removes default margin */
             position: relative; /* Ensure relative positioning for pseudo-elements */
+            transition: background-color 0.5s; /* Smooth transition for background color change */
         }
         .content {
             max-width: 600px; /* Optional: Limits the width of content */
@@ -27,7 +29,7 @@
             background-color: #92ac92; /* Optional: Adds a white background to content */
             border-radius: 10px; /* Optional: Adds rounded corners to content */
             position: relative; /* Ensure stacking context for z-index */
-            z-index: 1; /* Ensure content is above background text */
+            z-index: 1; /* Ensure content is above background */
         }
         .background-text {
             content: "Explore the World of DABS Intelligence Agency"; /* Text content */
@@ -87,6 +89,56 @@
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+
+        /* Floating ball */
+        .floating-ball {
+            position: fixed;
+            right: 20px; /* Adjust distance from the right side */
+            bottom: 20px; /* Adjust distance from the bottom */
+            width: 50px; /* Adjust size of the ball */
+            height: 50px; /* Adjust size of the ball */
+            background-color: #ff0000; /* Adjust background color */
+            border-radius: 50%; /* Ensure it's a circle */
+            z-index: 3; /* Ensure it's above the news ticker */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+        .floating-ball svg {
+            width: 70%; /* Adjust size of the SVG icon */
+            fill: #ffffff; /* Color of the SVG icon */
+        }
+
+        /* Red overlay */
+        .red-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0); /* red */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 4; /* Ensure it's above everything */
+            opacity: 0; /* Initially hidden */
+            pointer-events: none; /* Allow clicks through */
+            transition: opacity 0.5s; /* Smooth transition */
+        }
+        .red-overlay.show {
+            opacity: 1; /* Show overlay */
+            pointer-events: auto; /* Enable clicking */
+        }
+        .red-overlay h1 {
+            color: #ff0000; /* Text color */
+            font-size: 3rem; /* Adjust font size */
+            font-weight: bold; /* Adjust font weight */
+            text-align: center; /* Center-align text */
+            margin-bottom: 20px; /* Optional: Adjust margin */
+        }
     </style>
 </head>
 <body>
@@ -124,7 +176,16 @@
         <div class="news-item">Exclusive interview with Shahmir Zahid CANCELLED!!!!!!!</div>
         <div class="news-item" id="ip-address">Loading IP address...</div> <!-- Dynamically updated IP address will be displayed here -->
         <div class="news-item">Shahmir sequel is still in the works as rumors spread of its cancellation.</div>
-   
+    </div>
+
+    <!-- Floating ball -->
+    <div class="floating-ball" id="red-ball">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-12h2v2h-2zm0 4h2v6h-2z"/></svg>
+    </div>
+
+    <!-- Red overlay -->
+    <div class="red-overlay" id="red-overlay">
+        <h1>You shouldn't have done that.</h1>
     </div>
 
     <script>
@@ -138,6 +199,36 @@
         }
 
         getIpAddress(); // Call the function once when the page loads
+
+        // Event listener for the floating ball
+        const redBall = document.getElementById('red-ball');
+        const redOverlay = document.getElementById('red-overlay');
+        redBall.addEventListener('click', function() {
+            // Toggle red overlay
+            redOverlay.classList.toggle('show');
+            
+            // Delay to create the effect
+            setTimeout(function() {
+                // Apply pitch-black background
+                document.body.style.backgroundColor = '#000000';
+                // Create white text in the center
+                const blackScreenText = document.createElement('div');
+                blackScreenText.textContent = "You don't know what approaches you";
+                blackScreenText.style.color = '#ffffff';
+                blackScreenText.style.fontSize = '2rem';
+                blackScreenText.style.textAlign = 'center';
+                blackScreenText.style.position = 'fixed';
+                blackScreenText.style.top = '50%';
+                blackScreenText.style.left = '50%';
+                blackScreenText.style.transform = 'translate(-50%, -50%)';
+                document.body.appendChild(blackScreenText);
+            }, 1000); // Wait 1 second before changing the background
+    
+            // Redirect to a blank page after 3 seconds
+            setTimeout(function() {
+                window.location.href = 'about:blank'; // Redirect to a blank page
+            }, 4000); // Total delay of 4 seconds (1s + 3s)
+        });
     </script>
 </body>
 </html>
