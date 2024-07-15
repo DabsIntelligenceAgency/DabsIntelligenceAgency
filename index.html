@@ -23,7 +23,7 @@
             transition: background-color 0.5s; /* Smooth transition for background color change */
         }
         .content {
-            max-width: 600px; /* Optional: Limits the width of content */
+            max-width: 90%; /* Adjusted for better responsiveness */
             padding: 20px;
             text-align: center; /* Center-align text */
             background-color: #92ac92; /* Optional: Adds a white background to content */
@@ -62,7 +62,7 @@
             margin-top: 20px; /* Optional: Adjust margin */
         }
         .image-container img {
-            max-width: 200px; /* Set maximum width for the logo */
+            max-width: 100%; /* Set maximum width for the logo */
             height: auto; /* Maintain aspect ratio */
             display: block; /* Ensure the image behaves as a block element */
             margin: 0 auto; /* Center the image horizontally */
@@ -139,6 +139,59 @@
             text-align: center; /* Center-align text */
             margin-bottom: 20px; /* Optional: Adjust margin */
         }
+
+        /* Style for the new section */
+        .image-with-description {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f2f2f2; /* Light gray background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+            text-align: left; /* Align text to the left */
+        }
+
+        .image-with-description img {
+            max-width: 100%; /* Adjust image size */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensure the image behaves as a block element */
+            margin: 0 auto 10px; /* Center the image horizontally with some bottom margin */
+        }
+
+        .image-description {
+            margin-top: 10px; /* Adjust spacing between image and description */
+        }
+
+        .image-description h3 {
+            margin-top: 0; /* Remove top margin for title */
+        }
+
+        .image-description p {
+            margin-bottom: 0; /* Remove bottom margin for paragraphs */
+        }
+
+        /* Media Query for Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                padding: 10px; /* Reduce padding for smaller screens */
+            }
+            .image-container img,
+            .image-with-description img {
+                max-width: 100%; /* Ensure images resize properly */
+            }
+            .news-ticker {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+            .floating-ball {
+                width: 40px; /* Adjust floating ball size */
+                height: 40px; /* Adjust floating ball size */
+            }
+            .floating-ball svg {
+                width: 60%; /* Adjust SVG size for floating ball */
+            }
+            .red-overlay h1 {
+                font-size: 2rem; /* Adjust font size for red overlay */
+            }
+        }
     </style>
 </head>
 <body>
@@ -157,13 +210,48 @@
 
         <!-- YouTube Video Embed -->
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-1kOrTV8wcI?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/-1kOrTV8wcI?autoplay=1" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <!-- Daily Funny Picture -->
         <h2>Weekly Funny Picture from DIA:</h2>
         <div class="image-container">
             <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/450113916_1629635704248838_6081174492998520114_n.png?_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=j3sGYRNFpuUQ7kNvgEIU1Ab&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QFLfVDUQVAgXvmj2lqn9cWWtaL6fNDGaSpjGeghstuSHQ&oe=66BB9CA4" alt="Daily Funny Picture">
+        </div>
+
+        <!-- The 4 Horsemen of DIA -->
+        <h2>The 4 Horsemen of DIA</h2>
+
+        <div class="image-with-description">
+            <img src="image_url_1.jpg" alt="Image 1">
+            <div class="image-description">
+                <h3>Horseman 1: John Doe</h3>
+                <p>Description of the first horseman goes here.</p>
+            </div>
+        </div>
+
+        <div class="image-with-description">
+            <img src="image_url_2.jpg" alt="Image 2">
+            <div class="image-description">
+                <h3>Horseman 2: Jane Smith</h3>
+                <p>Description of the second horseman goes here.</p>
+            </div>
+        </div>
+
+        <div class="image-with-description">
+            <img src="image_url_3.jpg" alt="Image 3">
+            <div class="image-description">
+                <h3>Horseman 3: Michael Brown</h3>
+                <p>Description of the third horseman goes here.</p>
+            </div>
+        </div>
+
+        <div class="image-with-description">
+            <img src="image_url_4.jpg" alt="Image 4">
+            <div class="image-description">
+                <h3>Horseman 4: Emily Davis</h3>
+                <p>Description of the fourth horseman goes here.</p>
+            </div>
         </div>
     </div>
     
