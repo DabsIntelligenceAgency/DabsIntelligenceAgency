@@ -69,18 +69,18 @@
         }
         /* News ticker animation */
         .news-ticker {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #48ff00;
-            color: #000000;
-            padding: 10px 0;
-            animation: ticker 20s linear infinite;
-            white-space: nowrap;
-            overflow: hidden;
-            z-index: 2; /* Ensure the news ticker is in front */
-        }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #48ff00;
+    color: #000000;
+    padding: 10px 0;
+    animation: ticker 20s linear infinite;
+    white-space: initial; /* Allow wrapping of news ticker items */
+    overflow: visible; /* Ensure content is visible beyond container */
+    z-index: 2; /* Ensure the news ticker is in front */
+}
         .news-item {
             display: inline-block;
             padding: 0 20px;
@@ -144,7 +144,7 @@
         .image-with-description {
             margin-top: 20px;
             padding: 10px;
-            background-color: #f2f2f2; /* Light gray background */
+            background-color: #059b00; /* Light gray background */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
             text-align: left; /* Align text to the left */
@@ -161,6 +161,11 @@
             margin-top: 10px; /* Adjust spacing between image and description */
         }
 
+        .image-description {
+    margin-top: 10px;
+    text-align: center; /* Center-align text */
+}
+        
         .image-description h3 {
             margin-top: 0; /* Remove top margin for title */
         }
@@ -223,38 +228,72 @@
         <h2>The 4 Horsemen of DIA</h2>
 
         <div class="image-with-description">
-            <img src="image_url_1.jpg" alt="Image 1">
+            <img src="https://scontent.cdninstagram.com/v/t51.2885-19/448892797_1014770250044522_2528972129827308640_n.jpg?stp=dst-jpg_s100x100&_nc_cat=111&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=IAhCgmUg2uYQ7kNvgFzysrR&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYBOkaJR50Ive55T24PzrjrAVxgI2JpyNVq6aaJbwRm2ig&oe=669AB268" alt="Image 1">
             <div class="image-description">
-                <h3>Horseman 1: John Doe</h3>
-                <p>Description of the first horseman goes here.</p>
+                <h3>Haider Karim Gilgiti</h3>
+                <p>White, short and autistic. What else do you need? One of the founding fathers of DIA.</p>
             </div>
         </div>
 
         <div class="image-with-description">
-            <img src="image_url_2.jpg" alt="Image 2">
+            <img src="https://scontent.cdninstagram.com/v/t51.2885-19/450614192_1039956611118614_7583732844391492992_n.jpg?stp=dst-jpg_s100x100&_nc_cat=103&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=IsQIeHcA0V8Q7kNvgFbosSP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYAEn5xaAEBSScOPlC8DHWVhyT6mXWt6nG1oo2YAfkS8UA&oe=669ACCF1" alt="Image 2">
             <div class="image-description">
-                <h3>Horseman 2: Jane Smith</h3>
-                <p>Description of the second horseman goes here.</p>
+                <h3>Sushi</h3>
+                <p>The opposite of Haider Karim. Also a founding father of DIA.</p>
             </div>
         </div>
 
         <div class="image-with-description">
-            <img src="image_url_3.jpg" alt="Image 3">
+            <img src="https://scontent.cdninstagram.com/v/t51.2885-19/451004593_979625890558145_1081655138225609378_n.jpg?stp=dst-jpg_s100x100&_nc_cat=105&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=KMOhGs5QkS4Q7kNvgFM_B_g&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYBjylX9Bd0w525bVhwxq6cte2CMDfguhIcdh-4JqGfDVA&oe=669A9C38" alt="Image 3">
             <div class="image-description">
-                <h3>Horseman 3: Michael Brown</h3>
-                <p>Description of the third horseman goes here.</p>
+                <h3>Momo</h3>
+                <p>Ex-General of DIA raids, now retired. Has a record of over 2 successful raids.</p>
             </div>
         </div>
 
         <div class="image-with-description">
-            <img src="image_url_4.jpg" alt="Image 4">
+            <img src="https://scontent.cdninstagram.com/v/t51.2885-19/419032000_343863498589970_3164132764193807852_n.jpg?stp=dst-jpg_s100x100&_nc_cat=100&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=8jrBrubPMrkQ7kNvgG1-uIn&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYBbkAD6t_92UYcRhGNWlEbWcBEEYsCBXDa218F_QddphQ&oe=669AA0B0" alt="Image 4">
             <div class="image-description">
-                <h3>Horseman 4: Emily Davis</h3>
-                <p>Description of the fourth horseman goes here.</p>
+                <h3>"The W"</h3>
+                <p>Entity of DIA, Usually gets into Haider Karims accounts. Likes to exile someone once in a while</p>
             </div>
         </div>
+
+    <!-- Other important members -->
+<h2>Other important members</h2>
+
+<div class="image-with-description">
+    <img src="https://scontent.cdninstagram.com/v/t51.2885-19/450484475_708452474740248_5651010992868519770_n.jpg?stp=dst-jpg_s100x100&_nc_cat=104&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=mFZ89BQDRUUQ7kNvgGuH9Fk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYAJgcTnd3ehLriv4u6J6UBDFVHXGg-lWLvVdbva3FXhIg&oe=669AD0C8" alt="Image 5">
+    <div class="image-description">
+        <h3>Habibi Ocelot</h3>
+        <p>Current General of DIA. Highly respected, known to have a "confrontational" approach.</p>
     </div>
-    
+</div>
+
+<div class="image-with-description">
+    <img src="https://scontent.cdninstagram.com/v/t51.2885-19/450489957_1154737079126502_2484736503853908958_n.jpg?stp=dst-jpg_s100x100&_nc_cat=101&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=KSjE38hl50IQ7kNvgF3RuB5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYAapITMcLhPTEOxCiQcSAaCkebZMKYYyiqN4jrxx1sm6w&oe=669AC920" alt="Image 6">
+    <div class="image-description">
+        <h3>rayy2sick</h3>
+        <p>Opposite of Oceleot, also his sibling.</p>
+    </div>
+</div>
+
+<div class="image-with-description">
+    <img src="https://scontent.cdninstagram.com/v/t51.2885-19/450350639_1689017845243046_5821934191843048841_n.jpg?stp=dst-jpg_s100x100&_nc_cat=104&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=CUclT8yDCpAQ7kNvgEzg7h2&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYDsCZWcIPwhOGAdUUW4LRFkjvNdAouEYVE3w0mECh3EPQ&oe=669ABF90" alt="Image 6">
+    <div class="image-description">
+        <h3>Balach</h3>
+        <p>Member of the Balochistan Liberation Army, pretty chill.</p>
+    </div>
+</div>
+
+<div class="image-with-description">
+    <img src="https://scontent.cdninstagram.com/v/t51.2885-19/449802695_354682287453410_5648619890730777450_n.jpg?stp=dst-jpg_s100x100&_nc_cat=102&ccb=1-7&_nc_sid=3fd06f&_nc_ohc=Bb4KRxhfN-4Q7kNvgG2OsBT&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.cdninstagram.com&oh=00_AYDLNnhPBGWF5iEdhlrYML-j25kVp1fVaKa578QPRoIfxg&oe=669AA25B" alt="Image 7">
+    <div class="image-description">
+        <h3>Alonzo</h3>
+        <p>Usually the one who gets exiled, got compromised once.</p>
+    </div>
+</div>
+
     <!-- Background text -->
     <div class="background-text"></div>
 
