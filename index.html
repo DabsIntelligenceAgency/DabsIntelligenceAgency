@@ -67,7 +67,6 @@
             display: block; /* Ensure the image behaves as a block element */
             margin: 0 auto; /* Center the image horizontally */
         }
-        /* News ticker animation */
         .news-ticker {
     position: fixed;
     bottom: 0;
@@ -81,6 +80,16 @@
     overflow: visible; /* Ensure content is visible beyond container */
     z-index: 2; /* Ensure the news ticker is in front */
 }
+
+/* Media query for screens narrower than 768px (adjust as needed) */
+@media (max-width: 768px) {
+    .news-ticker {
+        white-space: nowrap; /* Prevent wrapping on smaller screens */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
+}
+    
         .news-item {
             display: inline-block;
             padding: 0 20px;
@@ -148,7 +157,8 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
             text-align: left; /* Align text to the left */
-        }
+        
+}
 
         .image-with-description img {
             max-width: 100%; /* Adjust image size */
@@ -159,12 +169,8 @@
 
         .image-description {
             margin-top: 10px; /* Adjust spacing between image and description */
+            text-align: center; /* Center-align text */
         }
-
-        .image-description {
-    margin-top: 10px;
-    text-align: center; /* Center-align text */
-}
         
         .image-description h3 {
             margin-top: 0; /* Remove top margin for title */
@@ -196,7 +202,8 @@
             .red-overlay h1 {
                 font-size: 2rem; /* Adjust font size for red overlay */
             }
-        }
+
+            
     </style>
 </head>
 <body>
