@@ -67,17 +67,18 @@
             display: block; /* Ensure the image behaves as a block element */
             margin: 0 auto; /* Center the image horizontally */
         }
-        .news-ticker {
+  /* Default styles for the news ticker */
+.news-ticker {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* Full width */
     background-color: #48ff00;
     color: #000000;
     padding: 10px 0;
     animation: ticker 20s linear infinite;
     white-space: normal; /* Allow news ticker items to wrap onto multiple lines */
-    overflow: visible; /* Ensure content is visible beyond container */
+    overflow: hidden; /* Ensure content is visible beyond container */
     z-index: 2; /* Ensure the news ticker is in front */
 }
 
@@ -87,6 +88,8 @@
         white-space: nowrap; /* Prevent wrapping on smaller screens */
         overflow-x: auto; /* Enable horizontal scrolling */
         -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        animation: ticker 60s linear infinite; /* Slower animation for better readability */
+        width: auto; /* Let the width be determined by the content */
     }
 }
     
